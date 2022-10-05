@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!-- Required meta tags -->
+       <meta charset="utf-8">
+       <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+   
+       <!-- Bootstrap CSS -->
+       <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
     <title>Activity 2</title>
 </head>
 <body>
-    <form action ="#" method="POST">
-        <label for="name">Name</label>
-	    <input type="text" name="name" placeholder="Enter Name"/ required>
-        <label for="birthday">Birthday</label>
-		<input type="text" id="birthday" name="birthday" placeholder="YYYY/MM/DD"/ required>
-        <label for="username">Username</label>
-	    <input type="text" name="username" placeholder="Enter Username"/ required>
-        <label for="password">Password</label>
-		<input type="password" name="password" placeholder="Enter Password"/ required>
-        <button type="submit" id="button" name="signin">Sign Up</button>
-    </form>
+    <div class="container"
+        <form action ="#" method="POST">
+            <div class="form-group">
+            <label for="name">Name</label>
+	        <input class="form-control" type="text" name="name" placeholder="Enter Name"/ required>
+            </div>
+            <div class="form-group">
+            <label for="birthday">Birthday</label>
+	    	<input class="form-control" type="date" id="birthday" name="birthday" placeholder="YYYY/MM/DD"/ required>
+            </div>
+            <div class="form-group">
+            <label for="username">Username</label>
+	        <input class="form-control" type="text" name="username" placeholder="Enter Username"/ required>
+            </div>
+            <div class="form-group">
+            <label for="password">Password</label>
+	    	<input class="form-control" type="password" name="password" placeholder="Enter Password"/ required>
+            </div>
+            <button type="submit" id="button" class="btn btn-primary" name="signin">Sign Up</button>
+        </form>
+    </div>
 
     <?php
     $name1 = '';
     $username1 = '';
     $password1 = '';
-    require_once 'activity2dir.php';
+
     if(isset($_POST["signin"])){
         $birthday = $_POST["birthday"];
         $name = $_POST["name"];
@@ -71,5 +85,8 @@
         }
     }
     ?>
+    <script crossorigin="anonymous" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
